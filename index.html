@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en" class="geist-font">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Geist:wght@100..900&display=swap"
+      rel="stylesheet"
+    />
+    <title>smirkzyy</title>
+    <meta
+      name="description"
+      content="Developer for the Dead by Daylight modding community."
+    />
+    <meta name="author" content="Smirkzyy" />
+    <link rel="icon" href="./assets/pictures/logo.png" />
+    <link rel="stylesheet" href="assets/css/animation.css" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            backgroundImage: {
+              "grid-pattern":
+                "linear-gradient(to right, rgb(64 64 64 / 0.1) 1px, transparent 1px), linear-gradient(to bottom, rgb(64 64 64 / 0.1) 1px, transparent 1px)",
+              vignette:
+                "radial-gradient(circle at center, transparent 0%, rgb(10 10 10 / 0.8) 100%)",
+            },
+          },
+        },
+      };
+    </script>
+  </head>
+  <body
+    class="bg-neutral-950 min-h-screen flex items-center justify-center bg-grid-pattern bg-[size:30px_30px] relative"
+  >
+    <div class="absolute inset-0 bg-vignette pointer-events-none"></div>
+    <div class="flex flex-col items-center gap-4 p-4 w-full">
+      <div
+        class="text-4xl md:text-7xl font-bold bg-gradient-to-r from-neutral-100 to-neutral-400 bg-clip-text text-transparent animate-fade-in delay-100 mb-4 text-center pb-3"
+      >
+        smirkzyy
+      </div>
+      <div
+        class="text-xl md:text-2xl font-normal text-white/50 animate-fade-in delay-100 mb-4 text-center px-4"
+      >
+        Developer for the Dead by Daylight modding community.
+      </div>
+      <!-- buttons -->
+      <div
+        class="flex flex-wrap justify-center gap-3 mb-6 animate-fade-in delay-200"
+      >
+        <a
+          href="https://youtube.com/@smirkzyy"
+          target="_blank"
+          class="w-28 px-6 py-2 bg-white/80 hover:bg-white/60 hover:scale-105 rounded-full backdrop-blur-sm transition-all duration-200 text-neutral-800 font-medium text-center"
+        >
+          YouTube
+        </a>
+        <a
+          href="https://github.com/SmirkzyyDBD"
+          target="_blank"
+          class="w-28 px-6 py-2 bg-white/80 hover:bg-white/60 hover:scale-105 rounded-full backdrop-blur-sm transition-all duration-200 text-neutral-800 font-medium text-center"
+        >
+          GitHub
+        </a>
+        <a
+          href="https://steamcommunity.com/id/smirkzyy"
+          target="_blank"
+          class="w-28 px-6 py-2 bg-white/80 hover:bg-white/60 hover:scale-105 rounded-full backdrop-blur-sm transition-all duration-200 text-neutral-800 font-medium text-center"
+        >
+          Steam
+        </a>
+      </div>
+      <div
+        class="flex flex-col md:flex-row gap-4 w-full max-w-4xl justify-center px-4 relative z-10"
+      >
+        <!-- cards -->
+        <div
+          class="flex-1 p-6 md:p-8 bg-neutral-400/10 backdrop-blur-[2px] rounded-lg border border-neutral-400/10 relative z-20 animate-fade-in"
+        >
+          <h1
+            class="text-2xl md:text-3xl font-bold text-center text-neutral-100 mb-6 animate-fade-in delay-200"
+          >
+            Peripherals
+          </h1>
+          <div
+            class="text-xl text-left text-gray-200/60 mb-4 animate-fade-in delay-200 mt-2"
+          >
+            <strong>Keyboard:</strong>
+            Razer Huntsman Mini
+          </div>
+          <div
+            class="text-lg text-left text-gray-200/60 mb-6 animate-fade-in delay-200 mt-8"
+          >
+            <strong>Mouse:</strong>
+            Razer Viper
+          </div>
+          <div
+            id="coolfooter"
+            class="text-sm text-center text-white/30 animate-fade-in delay-200 mt-8"
+          >
+            cool.
+          </div>
+        </div>
+
+        <!--modal for ip hehehe-->
+        <div
+          id="ipModal"
+          class="fixed inset-0 bg-black/50 backdrop-blur-sm hidden items-center justify-center z-50"
+        >
+          <div
+            class="bg-neutral-900/80 p-8 rounded-lg border border-neutral-400/10 relative max-w-md w-full mx-4"
+          >
+            <span
+              id="closeModal"
+              class="absolute top-4 right-4 text-white/60 hover:text-white/90 cursor-pointer text-xl"
+              >&times;</span
+            >
+            <div id="modalContent" class="text-white/80 text-center mb-4">
+              <p id="ipInfo" class="mb-2">
+                Did you know your IP is:
+                <span
+                  class="inline-block bg-gray-200/20 rounded px-3 min-w-[140px] animate-pulse"
+                  >&nbsp;</span
+                >?
+              </p>
+            </div>
+          </div>
+        </div>
+        <div
+          class="flex-1 p-6 md:p-8 bg-neutral-400/10 backdrop-blur-[2px] rounded-lg border border-neutral-400/10 relative z-20 animate-fade-in"
+        >
+          <h1
+            class="text-2xl md:text-3xl font-bold text-center text-neutral-100 mb-6 animate-fade-in delay-200"
+          >
+            Official Partners
+          </h1>
+          <div class="flex flex-col items-center space-y-4 md:space-y-6 mb-6">
+            <a
+              href="https://olympushub.xyz"
+              target="_blank"
+              class="w-48 px-6 py-2 bg-white/80 hover:bg-white/60 hover:scale-105 rounded-full backdrop-blur-sm animate-fade-in delay-200 transition-all duration-200 text-neutral-800 font-medium text-center"
+            >
+              Olympus
+            </a>
+            <a
+              href="https://cdn.eefernal.cc"
+              target="_blank"
+              class="w-48 px-6 py-2 bg-white/80 hover:bg-white/60 hover:scale-105 rounded-full backdrop-blur-sm animate-fade-in delay-200 transition-all duration-200 text-neutral-800 font-medium text-center"
+            >
+              Eefernal Fog
+            </a>
+          </div>
+          <div
+            class="text-sm text-center pb-10 text-white/30 animate-fade-in delay-200"
+          >
+            Check them out!
+          </div>
+        </div>
+      </div>
+      <div
+        class="flex flex-col items-center gap-2 mt-4 animate-fade-in delay-200"
+      >
+        <div
+          class="text-2xl md:text-4xl font-bold bg-gradient-to-r from-neutral-100 to-neutral-400 bg-clip-text text-transparent animate-fade-in delay-100 mb-4"
+        >
+          Contact me on Discord!
+        </div>
+        <a
+          href="https://discordapp.com/users/641652579310239746"
+          target="_blank"
+          class="px-6 py-2 bg-indigo-500 hover:bg-indigo-600 hover:scale-105 rounded-lg backdrop-blur-sm transition-all duration-200 text-white font-medium"
+        >
+          Discord
+        </a>
+        <div
+          class="text-sm text-center text-white/55 animate-fade-in delay-200 mt-10"
+        >
+          &copy 2025 Smirkzyy. All rights reserved.
+        </div>
+      </div>
+    </div>
+
+    <script src="./assets/js/script.js"></script>
+  </body>
+</html>
